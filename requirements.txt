@@ -1,1 +1,4 @@
 awscli
+pydantic-settings
+structlog
+pymongo
