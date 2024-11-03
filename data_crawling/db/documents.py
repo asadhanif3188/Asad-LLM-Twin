@@ -7,7 +7,7 @@ from pydantic import UUID4, BaseModel, ConfigDict, Field
 from pymongo import errors
 from utils import get_logger
 
-# from db.mongo import connection 
+from db.mongo import connection 
 
 _database = connection.get_database("scrabble")
 
