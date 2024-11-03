@@ -1,13 +1,17 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+
 import uuid
 from typing import List, Optional
 
-from errors import ImproperlyConfigured
+# from errors import ImproperlyConfigured
 from pydantic import UUID4, BaseModel, ConfigDict, Field
 
 from pymongo import errors
-from utils import get_logger
+from data_crawling.utils import get_logger
 
-from db.mongo import connection 
+from mongo import connection 
 
 _database = connection.get_database("scrabble")
 
